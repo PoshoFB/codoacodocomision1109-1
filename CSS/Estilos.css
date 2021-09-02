@@ -6,6 +6,10 @@ selector{
 body{
     background-color: rgb(220, 183, 255);
 }
+main{
+    width: 80%;
+    margin-left: 10%;
+}
 h1,h2{
     text-align: center;
 }
@@ -15,9 +19,8 @@ header{
     display: flex;
     justify-content: flex-end;
     position: fixed;
-
     width: 80%;
-    margin-left: 10%;
+
 }
 header h1{
     background-color: rgba(255, 255, 255, 0.288);
@@ -43,8 +46,6 @@ nav ol li{
 article{
     padding-top: 100;
     background: linear-gradient(rgba(255, 0, 0, 0.397), rgba(255, 255, 0, 0.363));
-    width: 80%;
-    margin-left: 10%;
 }
 nav ol li a{
     text-decoration: none;
