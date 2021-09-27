@@ -1,0 +1,28 @@
+/* .nav-item{
+    text-size-adjust: 50%;
+}
+
+.container{
+    text-size-adjust: 80%;
+}
+.nav-item{
+    color: red;
+}
+.textoverde{
+    color: green;
+} */
+
+#fondo{
+    filter:brightness(50%);
+    object-fit: auto;
+    object-position: auto;
+    width: 100%;
+    /* height:min-content; */
+    margin-bottom: 1rem;
+}
+.micontainer{
+    position: absolute;
+    margin-top: 30%;
+    margin-left: 60%;
+    text-align: right;
+}
