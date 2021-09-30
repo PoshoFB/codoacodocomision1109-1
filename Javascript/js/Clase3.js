@@ -10,16 +10,16 @@ function sumar(){
     // let num2 = parseInt(prompt("ingresa tu segundo numero!"));
     let num = parseFloat(prompt("ingresa tu primer numero!"));
     let num2 = parseFloat(prompt("ingresa tu segundo numero!"));
-    let op = prompt("Escribi la operacion a realizar \n + para sumar\n - para restar\n * para multiplicar \n / para dividir")
+    let op = prompt("Escribi la operacion a realizar \n + para sumar \n - para restar \n * para multiplicar \n / para dividir")
     let resultado=0;
     switch (op) {
         case "+":
             resultado = num + num2;
-            miDiv.innerHTML +="<p> El resultado de la suma de "+num +" y "+num2+ " es: " + resultado + "</p>";
+            miDiv.innerHTML +="<p> El resultado de la Suma de "+num +" y "+num2+ " es: " + resultado + "</p>";
             break;
         case "-":
             resultado = num - num2;
-            miDiv.innerHTML +="<p> El resultado de la resta de "+num +" y "+num2+ " es: " + resultado + "</p>";
+            miDiv.innerHTML +="<p> El resultado de la Resta de "+num +" y "+num2+ " es: " + resultado + "</p>";
             break;
         case "/":
             resultado = num / num2;
@@ -34,4 +34,4 @@ function sumar(){
             break;
     }
 
-};
+}

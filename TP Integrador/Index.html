@@ -14,21 +14,21 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #333338;">
             <div class="container-fluid">
-                <a class="navbar-brand fs-4" href="#" style="background-color: #333338;">
-                  <img src="./IMG/codoacodo.png" alt="" height="60" class="d-inline-block" style="margin-left: 50%;">Conf Bs As
+                <a class="cacbar navbar-brand fs-4" href="#" style="background-color: #333338;">
+                  <img src="./IMG/codoacodo.png" alt="" height="60" class="d-inline-block" >Conf Bs As
                 </a>
 
-                <ul class="navbar-nav justify-content-start col-7 fs-5">
-                  <li class="nav-item1">
+                <ul class="ulbar navbar navbar-nav col-7 fs-5">
+                  <li class="nav-item">
                     <a class="nav-link active" href="#">La conferencia</a>
                   </li>
-                  <li class="nav-item2">
+                  <li class="nav-item">
                     <a class="nav-link" href="#">Los Oradores</a>
                   </li>
-                  <li class="nav-item3">
+                  <li class="nav-item">
                     <a class="nav-link" href="#">El lugar y la fecha</a>
                   </li>
-                  <li class="nav-item4">
+                  <li class="nav-item">
                     <a class="nav-link" href="#">Conviertete en orador</a>
                   </li>
                   <li class="nav-item">
@@ -43,8 +43,8 @@
     
     <section>
         <article>
-          <div class="container-fluid-lg text-white">
-            <img src="./IMG/ba1.jpg" id="fondo">
+          <div class="container-expand">
+            <img src="./IMG/ba1.jpg" class="img-fluid" id="fondo">
             <!-- <div class="micontainer card-img-overlay col-4">
               <h2 class="card-title">Conf Bs As</h2>
               <p class="card-text">Bs As llega primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento 
@@ -55,24 +55,21 @@
                 <button class="btn text-white btn-outline-light" type="button">Quiero ser orador</button>
                 <button class="btn btn-success text-white" type="button">Comprar tickets</button>
               </div> -->
-              <div class="container card-img-overlay">
+              <div class="container card-img-overlay text-white">
                 <div class="row">
-                  <div class="col-6">
-                    <div class="p-3"></div>
-                  </div>
                   <div class="micontainer col-6 p-5">
-                  <h2 class="card-title">Conf Bs As</h2>
-                  <p class="card-text fs-5">Bs As llega primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento 
-                   y experiencia de los expertos que estan creando el futuro de internet. Ven a conocer a miembros del evento, 
-                   a otros estudiantes Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!
-                  </p>
-                  <div class="md-block">
-                   <button class="btn text-white btn-outline-light" type="button">Quiero ser orador</button>
-                   <button class="btn btn-success text-white" type="button">Comprar tickets</button>
+                    <h2 class="container-title">Conf Bs As</h2>
+                    <p class="container-text fs-5">Bs As llega primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento 
+                       y experiencia de los expertos que estan creando el futuro de internet. Ven a conocer a miembros del evento, 
+                        a otros estudiantes Codo a Codo y los oradores de primer nivel que tenemos para ti. Te esperamos!
+                    </p>
+                    <div class="md-block">
+                      <button class="btn text-white btn-outline-light" type="button">Quiero ser orador</button>
+                      <button class="btn btn-success text-white" type="button">Comprar tickets</button>
+                    </div>
                   </div>
-                  </div>
-               </div>
-            </div>
+                </div>
+              </div>
           </div>
         </article>
 
@@ -150,35 +147,34 @@
         </article>
 
         <article>
-          <div class="text text-center">
-            <div class="card-body">
+            <div class="card-body text-center">
               <div class="card-text fs-6">CONVIERTETE EN UN</div>
               <h1 class="card-title">ORADOR</h1>
               <div class="card-text fs-6">Anotate como orador para dar una charla ignite. Cuentanos de que quieres hablar!</div>
             </div>
-          </div>
-          <div class="row justify-content-center mb-3">
-            <div class="col-3">
-              <input type="text" class="form-control  form-control-sm" placeholder="Nombre" aria-label="Nombre">
+
+           <div class="row justify-content-center mb-3">
+              <div class="col-3">
+                <input type="text" class="form-control  form-control-sm" placeholder="Nombre" aria-label="Nombre">
+              </div>
+              <div class="col-3">
+                <input type="text" class="form-control  form-control-sm" placeholder="Apellido" aria-label="Apellido">
+              </div>
             </div>
-            <div class="col-3">
-              <input type="text" class="form-control  form-control-sm" placeholder="Apellido" aria-label="Apellido">
+           <div class="row justify-content-center mb-3">
+              <div class="col-6">
+               <textarea class="form-control form-control-lg" placeholder="Sobre que quieres hablar?" id="floatingTextarea2" style="height: 150px" aria-describedby="passwordHelpBlock"></textarea>
+                <div id="passwordHelpBlock" class="form-text">Recuerda incluir un titulo para tu charla.</div>
+                <button type="submit" class="btn btn- col-12 mt-3 text-white btn-lg" style="background-color: #85d152;" >Enviar</button>
+              </div>
             </div>
-          </div>
-          <div class="row justify-content-center mb-3">
-          <div class="col-6">
-            <textarea class="form-control form-control-lg" placeholder="Sobre que quieres hablar?" id="floatingTextarea2" style="height: 150px" aria-describedby="passwordHelpBlock"></textarea>
-            <div id="passwordHelpBlock" class="form-text">Recuerda incluir un titulo para tu charla.</div>
-            <button type="submit" class="btn btn- col-12 mt-3 text-white btn-lg" style="background-color: #85d152;" >Enviar</button>
-          </div>
-          </div>
-        </article>
+         </article>
     </section>
 
     <footer>
       <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #183e61;">
-        <div class="container justify-content-center">
-            <ul class="navbar-nav col-9">
+        <div class="container justify-content-auto">
+            <ul class="footbar navbar-nav col-9">
               <li class="row nav-item col-2">
                 <a class="nav-link active" href="#">Preguntas frecuentes</a>
               </li>

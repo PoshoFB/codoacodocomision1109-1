@@ -12,17 +12,26 @@
     color: green;
 } */
 
+.cacbar{
+    margin-left: 8%;
+}
+.ulbar{
+    margin-right: 5%;
+}
 #fondo{
     filter:brightness(50%);
-    object-fit: auto;
-    object-position: auto;
+    /* object-fit: auto; */
+    /* object-position: auto; */
     width: 100%;
     /* height:min-content; */
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 .micontainer{
-    position: absolute;
     margin-top: 30%;
     margin-left: 55%;
     text-align: right;
+}
+.footbar{
+    /* margin-right: 3%; */
+    margin-left: 11%;
 }
