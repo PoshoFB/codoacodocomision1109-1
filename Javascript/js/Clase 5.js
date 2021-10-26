@@ -8,74 +8,73 @@ let mascotas = [];
 // mascotas[0]="Loro grande"
 // mascotas[1] = "Perro";
 //{propietario,especie,raza,edad,tamaño,imagen,tipoConsulta}
-const agregarMascota=()=>{
-    let datos = document.querySelectorAll("input");
-    // console.log(datos[6].checked);
-    let consulta="";
-    if(datos[6].checked){
-        consulta= "urgencia";
-    }else{
-        consulta="consulta"
-    }
-    console.log(consulta);
-   let mascota= {
-       propietario:datos[0].value,
-       especie:datos[1].value,
-       raza:datos[2].value,
-       edad:datos[3].value,
-       peso:datos[4].value,
-       src:datos[5].value,
-       consulta:consulta
-   };
-    mascotas.push(mascota);
-    mostrarMascotas();
-};
-const cambiarDatos=(c)=>{
+const agregarMascota = () => {
   let datos = document.querySelectorAll("input");
-  let consulta="";
-  if(datos[6].checked){
-      consulta= "urgencia";
-  }else{
-      consulta="consulta"
+  // console.log(datos[6].checked);
+  let consulta = "";
+  if (datos[6].checked) {
+    consulta = "urgencia";
+  } else {
+    consulta = "consulta";
   }
   console.log(consulta);
- let mascota= {
-     propietario:datos[0].value,
-     especie:datos[1].value,
-     raza:datos[2].value,
-     edad:datos[3].value,
-     peso:datos[4].value,
-     src:datos[5].value,
-     consulta:consulta
- };
- mascotas[c]= mascota;
- mostrarMascotas();
-
+  let mascota = {
+    propietario: datos[0].value,
+    especie: datos[1].value,
+    raza: datos[2].value,
+    edad: datos[3].value,
+    peso: datos[4].value,
+    src: datos[5].value,
+    consulta: consulta,
+  };
+  mascotas.push(mascota);
+  mostrarMascotas();
 };
-const modificarM=(b)=>{
-  let mascota =mascotas[b];
-  let consulta="";
-  if(mascota.consulta=="consulta"){
-    consulta=`<div class="mb-3 form-check">
+const cambiarDatos = (c) => {
+  let datos = document.querySelectorAll("input");
+  let consulta = "";
+  if (datos[6].checked) {
+    consulta = "urgencia";
+  } else {
+    consulta = "consulta";
+  }
+  console.log(consulta);
+  let mascota = {
+    propietario: datos[0].value,
+    especie: datos[1].value,
+    raza: datos[2].value,
+    edad: datos[3].value,
+    peso: datos[4].value,
+    src: datos[5].value,
+    consulta: consulta,
+  };
+  mascotas[c] = mascota;
+  mostrarMascotas();
+};
+const modificarM = (b) => {
+  let mascota = mascotas[b];
+  let consulta = "";
+  if (mascota.consulta == "consulta") {
+    consulta = `<div class="mb-3 form-check">
         <input type="radio" class="form-check-input" name="tipo" id="urgencia" >
         <label class="form-check-label" for="urgencia">Urgencia</label>
       </div>
       <div class="mb-3 form-check">
         <input type="radio" class="form-check-input" name="tipo" id="consulta" checked>
         <label class="form-check-label" for="consulta">Consulta</label>
-      </div>`
-  }else{
-    consulta=`  <div class="mb-3 form-check">
+      </div>`;
+  } else {
+    consulta = `  <div class="mb-3 form-check">
     <input type="radio" class="form-check-input" name="tipo" id="urgencia" checked >
     <label class="form-check-label" for="urgencia">Urgencia</label>
 </div>
 <div class="mb-3 form-check">
 <input type="radio" class="form-check-input" name="tipo" id="consulta" >
 <label class="form-check-label" for="consulta">Consulta</label>
-</div>`
+</div>`;
   }
-  console.log(consulta)
-  elemento.innerHTML=`
+  console.log(consulta);
+  elemento.innerHTML = `
   <form>
   <div class="mb-3">
       <label for="prop" class="form-label">
@@ -109,10 +108,10 @@ const modificarM=(b)=>{
   `;
 };
 
-const mostrarMascotas=()=>{
-        elemento.innerHTML="";
-    for(let a = 0; a < mascotas.length; a++){
-        elemento.innerHTML+=`
+const mostrarMascotas = () => {
+  elemento.innerHTML = "";
+  for (let a = 0; a < mascotas.length; a++) {
+    elemento.innerHTML += `
         <div class="card mr-4" style="width: 18rem;">
         <img src="${mascotas[a].src}" class="card-img-top" alt="...">
         <div class="card-body">
@@ -128,12 +127,12 @@ const mostrarMascotas=()=>{
         </div>
       </div>
         `;
-    }
+  }
 };
 // function mostrarMascotas(){}
 //{propietario,especie,raza,edad,tamaño,imagen,tipoConsulta}
-const CrearFormulario=()=>{
-    elemento.innerHTML=`
+const CrearFormulario = () => {
+  elemento.innerHTML = `
     <form>
     <div class="mb-3">
         <label for="prop" class="form-label">
@@ -171,11 +170,10 @@ const CrearFormulario=()=>{
   </div>
     <button type="button" class="btn btn-primary" id="btn">Agregar Datos</button>
   </form>
-    `;  
-    document.getElementById("btn").addEventListener('click',agregarMascota);
-
+    `;
+  document.getElementById("btn").addEventListener("click", agregarMascota);
 };
-CrearFormulario(); 
+CrearFormulario();
 
 // let numeros =[5,78,98,77];
 // console.log(numeros.indexOf(77))
