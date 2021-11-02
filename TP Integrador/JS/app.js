@@ -1,3 +1,16 @@
+const precioTicket = 200;
+const descuentoEstudiante = 0.2;
+const descuentoTrainee = 0.5;
+const descuentoJunior = 0.85;
+
+const ticketEstudiante = precioTicket * descuentoEstudiante;
+const ticketTrainee = precioTicket * descuentoTrainee;
+const ticketJunior = precioTicket * descuentoJunior;
+
+console.log(ticketEstudiante);
+console.log(ticketTrainee);
+console.log(ticketJunior);
+
 let container = document.getElementById("seccion");
 
 const comprarTicket = () => {
@@ -20,9 +33,9 @@ const comprarTicket = () => {
                         </div>
                         <div class="card">
                         <div class="card-body border border-primary mr-1">
-                            <h5 class="card-title text-center">Estudiantes</h5>
+                            <h5 class="card-title text-center">Trainee</h5>
                             <p class="card-text text-center">Tienen un descuento</p>
-                            <p class="card-title text-center font-weight-bold">80%</p>
+                            <p class="card-title text-center font-weight-bold">50%</p>
                             <p class="card-text text-center">
                                 <small class="text-muted">
                                     * presentar documentación
@@ -32,9 +45,9 @@ const comprarTicket = () => {
                     </div>
                     <div class="card">
                     <div class="card-body border border-primary mr-1">
-                        <h5 class="card-title text-center">Estudiantes</h5>
+                        <h5 class="card-title text-center">Junior</h5>
                         <p class="card-text text-center">Tienen un descuento</p>
-                        <p class="card-title text-center font-weight-bold">80%</p>
+                        <p class="card-title text-center font-weight-bold">15%</p>
                         <p class="card-text text-center">
                             <small class="text-muted">
                                 * presentar documentación
@@ -82,8 +95,8 @@ const comprarTicket = () => {
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="alert alert-primary" role="alert">
-                                Cantidad a pagar: $
+                            <div class="alert alert-primary" role="alert" id="cantidadApagar">
+                                Cantidad a pagar: $ 
                             </div>
                         </div>
                         <div class="form-row d-flex">
@@ -91,12 +104,27 @@ const comprarTicket = () => {
                             <button class="btn btn-lg btn-primary col-6 m-1">Borrar</button>
                         
                        
-                            <button class="btn btn-lg btn-primary col-6 m-1">Resumen</button>
+                            <button class="btn btn-lg btn-primary col-6 m-1" onclick="calcular()" type="button">Resumen</button>
                         
                         </div>
+                
                     </form>
                 </div>
             </div>
         </div>
     `;
+};
+
+const calcular = () => {
+  let cantidad = document.getElementById("cantidadEntradas").value;
+  let descuentos = document.getElementById("inputSelect").value;
+  let cantidadApagar = document.getElementById("cantidadApagar");
+  if (descuentos === "estudiante") {
+    cantidadApagar.innerHTML = ticketEstudiante * parseInt(cantidad);
+  } else if (descuentos === "trainee") {
+    cantidadApagar.innerHTML = ticketTrainee * parseInt(cantidad);
+  } else {
+    cantidadApagar.innerHTML = ticketJunior * parseInt(cantidad);
+  }
+  console.log(parseInt(cantidad));
 };
