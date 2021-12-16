@@ -19,9 +19,9 @@
         <h1 class="text-center">Listado de Alumnos</h1>
         <div class="container">
             <div class="row">
-                <a class="btn btn-primary col-md-4 m-4" 
+                <a class="btn btn-info col-2 mr-0 my-2" 
                    href="AlumnosController?accion=nuevo">Agregar Alumno</a>
-                <table class="table table-primary">
+                <table class="table table-secondary">
                     <thead>
                         <tr>
                             <th>Id</th>
@@ -48,8 +48,8 @@
                                     <td> <%=resultado.get(i).getApellidos() %></td>
                                     <td> <%=resultado.get(i).getEmail() %></td>
                                     <td> <%=resultado.get(i).getTelefono() %></td>
-                                    <td><a class="text-success" href="<%= ruta %>">X</a></td>
-                                    <td><a class="text-danger" href=<%= rutaE %>>X</a></td>
+                                    <td><a class="btn btn-secondary col-6" href="<%= ruta %>">Modificar</a></td>
+                                    <td><a class="btn btn-danger col-6" href="<%= rutaE %>">Eliminar</a></td>
                                 </tr>
                              <%   
                             }

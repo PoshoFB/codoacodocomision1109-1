@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.Alumnos;
 import modelo.AlumnosDAO;
 
 @WebServlet(name = "AlumnosController", urlPatterns = {"/AlumnosController"})
@@ -24,6 +25,36 @@ public class AlumnosController extends HttpServlet {
                 dispatcher = request.getRequestDispatcher("Vistas/alumnos.jsp");
             }else if(accion.equals("modificar")){
                 dispatcher = request.getRequestDispatcher("Vistas/modificar.jsp");
+            
+                        }else if(accion.equals("actualizar")){
+                String nombre = request.getParameter("nombre");
+                String apellido = request.getParameter("apellido");
+                String email = request.getParameter("email");
+                String telefono = request.getParameter("telefono");
+                int id = Integer.parseInt(request.getParameter("id"));
+                Alumnos alumno = new Alumnos(id,nombre,apellido,email,telefono);
+                alum.actualizarAlumno(alumno);
+                dispatcher = request.getRequestDispatcher("Vistas/alumnos.jsp");
+            
+            }else if (accion.equals("eliminar")){
+                int id = Integer.parseInt(request.getParameter("id"));
+                alum.eliminarAlumno(id);
+                dispatcher = request.getRequestDispatcher("Vistas/alumnos.jsp");
+            }else if(accion.equals("nuevo")){
+                dispatcher = request.getRequestDispatcher("Vistas/nuevo.jsp");
+            }else if(accion.equals("insert")){
+                String nombre = request.getParameter("nombre");
+                String apellido = request.getParameter("apellido");
+                String email = request.getParameter("email");
+                String telefono = request.getParameter("telefono");
+                
+                Alumnos alumno = new Alumnos(0,nombre,apellido,email,telefono);
+                alum.insertarAlumno(alumno);
+                dispatcher = request.getRequestDispatcher("Vistas/alumnos.jsp");
+            }else if(accion.equals("ingresar")){
+                String usuario = request.getParameter("usuario");
+                String clave = request.getParameter("password");
+                boolean ingresa = alum.ingresarUsuario(usuario,clave);
             }
             dispatcher.forward(request,response);
     }

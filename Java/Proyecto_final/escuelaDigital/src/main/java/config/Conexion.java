@@ -35,9 +35,7 @@ public class Conexion {
             String email = rs.getString("email");
             String telefono = rs.getString("telefono");
             
-            System.out.println(" Id: " + id + " Nombre: "+ nombres+ " Apellidos: "
-            + apellidos +" Email: "+ email + " Telefono: "+
-                    telefono);
+            System.out.println(" Id: " + id + " Nombre: "+ nombres+ " Apellidos: "+ apellidos +" Email: "+ email + " Telefono: "+telefono);
         }
         
     }
